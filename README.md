@@ -15,3 +15,12 @@ charset: utf8
   ztoh (全角): 半角  
   
 文字エンコーディング: UTF-8   
+
+one line  
+// htoz  
+(function (src) { return Array.prototype.map.call(src, function (c) { var code = c.charCodeAt(0); if (0x21 <= code && code <= 0x7E) { return String.fromCharCode(code+0xFEE0); } else { return c; } }).join(''); })
+('Your input')  
+
+// ztoh  
+(function (src) { return Array.prototype.map.call(src, function (c) { var code = c.charCodeAt(0); if (0xFF01 <= code && code <= 0xFF5E) { return String.fromCharCode(code-0xFEE0); } else { return c; } }).join(''); })
+('Your input')
