@@ -41,7 +41,6 @@ function ztoh (src) {
                         // fullwidth char                                            
                         dst[index] = String.fromCharCode(code);
                 }
-                }
         }
         return dst.join('');
 }
